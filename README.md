@@ -14,42 +14,56 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 
 1. 🔍 [Objetivo](#objetivo)
 2. 🔨 [Ferramentas Utilizadas](#versions)  
-3. 🚀 [Percurso](#percurso)
-4. ☑️ [Análise do Projeto - Cadeia de Suprimentos](#analysis-supply-chain)
-5. 📈 [Análise - Banco de Dados: Cadeia de Suprimentos](#analysis-data)
-6. 💬 [Contribuições](#contributors)    
-7. 🔗 [Link](#link)  
+3. 🚀 [Percurso Machine Learning](#percurso)
+4. 🎆 [Percurso Deep Learning](#percurso-dl)
+5. ☑️ [Análise Machine Learning](#analysis)
+6. 📈 [Análise Deep Learning](#analysis-data)
+7. 💬 [Contribuições](#contributors)    
+8. 🔗 [Link](#link)  
 
 
 
 
 
 
-## <a name="objetivo">🔍 Objetivo </a> 
-Machine Learning: trataremos de um modelo em aprendizado supervisionado,para escolher o melhor modelo para prever o grau de obesidade.
-Deep Learning: criar um modelo de visão computacional que consiga classificar as imagens em alguma das categorias de animais:pinguins e tartarugas.
+## <a name="objetivo">🔍 Objetivos </a> 
+
+1. Machine Learning: trataremos de um modelo em aprendizado supervisionado,para escolher o melhor modelo para prever o grau de obesidade.
+
+2. Deep Learning: criar um modelo de visão computacional que consiga classificar as imagens em alguma das categorias de animais:pinguins e tartarugas.
 
 
 
-## <a name="percurso">🚀 Percurso</a>
+## <a name="percurso">🚀 Percurso Machine Learning </a>
 
-| N°               | Etapas           |
-| ----------------- | ----------------|
-| 1    | Coleta de dados     |
-| 2    | Análise Exploratória e Pré Processamento de Dados |
-| 3    | Tratamento de Dados  |
-| 4    | Machine Learning  |
-| 5    | Análise exploratória de dados|
+|      N°          |    Etapas        |
+| ---------------- | -----------------|
+|  1  | Coleta de dados               |
+|  2  | Análise Exploratória          |
+|  3  | Tratamento de Dados           |
+|  4  | Machine Learning              |
+|  5  | Pipelines                     |
+|  6  | Otimização dos hiperparâmetros|
 
 ---
+
+## <a name="percurso-dl">🎆 Percurso Deep Learning </a>
+
+|      N°          |    Etapas        |
+| ---------------- | -----------------|
+|  1  | Coleta de dados               |
+|  2  | Análise Exploratória          |
+|  3  | Tratamento de Dados           |
+|  4  | Machine Learning              |
+|  5  | Pipelines                     |
+|  6  | Otimização dos hiperparâmetros|
 
 
 ## <a name="versions">🔨 Ferramentas Utilizadas </a>
 
-- [Microsoft Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal)
-    * Data Factory
-    * Azure SQL Database
-    * Azure Purview
+- [Kaggle](https://azure.microsoft.com/pt-br/get-started/azure-portal)
+    * Coleta de Dados
+    
   
 - [Google Colab:](https://colab.research.google.com/?utm_source=scs-index)
      ```bash
@@ -57,20 +71,18 @@ Deep Learning: criar um modelo de visão computacional que consiga classificar a
     import numpy as np # Importação do Numpy
     import pandas as pd # Importação do Pandas
     import matplotlib.pyplot as plt # Importação do Matplotlib
-    import seaborn as sns # Importação do Seaborn
+    import seaborn as sns # importando a biblioteca Seaborn
+    from sklearn.model_selection import train_test_split # para particionar em bases de treino e teste (holdout)
+    from sklearn.pipeline import Pipeline # para preparar os pipelines # para preparar os pipelines
     ```
 
-## <a name="analysis-supply-chain">☑️ Análise do Projeto - Cadeia de Suprimentos</a>
+## <a name="analysis">☑️ Análise Machine Learning</a>
 
-Na plataforma Kaggle está um conjunto de dados que foi coletado de uma startup de Moda e Beleza. O conjunto de dados é baseado na cadeia de suprimentos de produtos de maquiagem.
+O dataset utilizado neste notebook possibilitará trabalharmos com modelos de machine learning (aprendizado de máquina), para escolher o melhor modelo para prever o grau de obesidade. Nossos dados são estruturados, onde foram extraídos de um banco de dados da plataforma Kaggle. Trataremos um modelo em aprendizado supervisionado, já que este modelo é construído a partir de um dataset, que são apresentados para um algoritmo na forma de entrada e saída desejada.
 
-Os insights gerados sobre as operações da cadeia de suprimentos é extremamente importante. É possível deduzir a partir das visualizações gráficas os produtos mais vendidos, geração de receita, modais de transporte, custos de envio, lead times e custos de fabricação, entre outras métricas.
+Resultado: Utilizando a validação cruzada estratificada para que o modelo treinado, resulte em melhor aproveitamento do dataset. Resultou em: a Árvore de Classificação CART com os dados padronizados e normalizados apresentaram a melhor acurácia, comparado aos dados orgininais.
 
-A partir de uma análise, junto ao especialista de negócio, pode ser possível otimizar a gestão de estoques, evitar pertas de produtos, identificar clientes alvo, estudar melhores rotas para custo/benefício, estreitar relações comerciais com os fornecedores, entre outros.
-
-Manter a integridade do banco de dados evita perdas ao negócio, pois aumenta performace dos dados para a geração de insights valiosos.
-
-## <a name="analysis-data">📈 Análise - Banco de Dados: Cadeia de Suprimentos</a>
+## <a name="analysis-data">📈 Análise Deep Learning</a>
 
 A partir da Entidade Supply-Chain podemos começar a construir novos relacionamentos para especilizar ainda mais nossa companhia, representando as associações entre as entidades.
 
