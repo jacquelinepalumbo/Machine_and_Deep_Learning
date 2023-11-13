@@ -14,8 +14,8 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 
 1. 🔍 [Objetivo](#objetivo)
 2. 🔨 [Ferramentas Utilizadas](#versions)  
-3. 🚀 [Percurso Machine Learning](#percurso)
-4. 🎆 [Percurso Deep Learning](#percurso-dl)
+3. 🚀 [1. Percurso Machine Learning](#percurso)
+4. 🎆 [2. Percurso Deep Learning](#percurso-dl)
 5. ☑️ [Análise Machine Learning](#analysis)
 6. 📈 [Análise Deep Learning](#analysis-data)
 7. 💬 [Contribuições](#contributors)    
@@ -34,7 +34,7 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 
 
 
-## <a name="percurso">🚀 Percurso Machine Learning </a>
+## <a name="percurso">🚀 1. Percurso Machine Learning </a>
 
 |      N°          |    Etapas        |
 | ---------------- | -----------------|
@@ -44,10 +44,11 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 |  4  | Machine Learning              |
 |  5  | Pipelines                     |
 |  6  | Otimização dos hiperparâmetros|
+|  7  | Simulação em dados não vistos |
 
 ---
 
-## <a name="percurso-dl">🎆 Percurso Deep Learning </a>
+## <a name="percurso-dl">🎆 2. Percurso Deep Learning </a>
 
 |      N°          |    Etapas        |
 | ---------------- | -----------------|
@@ -55,8 +56,9 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 |  2  | Análise Exploratória          |
 |  3  | Tratamento de Dados           |
 |  4  | Machine Learning              |
-|  5  | Pipelines                     |
-|  6  | Otimização dos hiperparâmetros|
+|  5  | Rede Neural Convolucional     |
+|  6  | Treinamento do modelo         |
+|  7  | Simulação em dados não vistos |
 
 
 ## <a name="versions">🔨 Ferramentas Utilizadas </a>
@@ -72,8 +74,14 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
     import pandas as pd # Importação do Pandas
     import matplotlib.pyplot as plt # Importação do Matplotlib
     import seaborn as sns # importando a biblioteca Seaborn
+    import tensorflow as tf # importando keras no Tensorflow
     from sklearn.model_selection import train_test_split # para particionar em bases de treino e teste (holdout)
     from sklearn.pipeline import Pipeline # para preparar os pipelines # para preparar os pipelines
+    from sklearn.model_selection import KFold # para preparar os folds da validação cruzada
+    from sklearn.model_selection import StratifiedKFold # para preparar os folds da validação estratificada
+    from sklearn.model_selection import cross_val_score # para executar a validação cruzada
+    from sklearn.metrics import accuracy_score # para a exibição da acurácia do modelo
+    from sklearn.metrics import confusion_matrix # para a exibição da matriz de confusão
     ```
 
 ## <a name="analysis">☑️ Análise Machine Learning</a>
@@ -82,13 +90,17 @@ O dataset utilizado neste notebook possibilitará trabalharmos com modelos de ma
 
 Resultado: Utilizando a validação cruzada estratificada para que o modelo treinado, resulte em melhor aproveitamento do dataset. Resultou em: a Árvore de Classificação CART com os dados padronizados e normalizados apresentaram a melhor acurácia, comparado aos dados orgininais.
 
+Avaliação do modelo de Machine Learning: a acurácia do modelo nos dados de teste 0.99.
+
 ## <a name="analysis-data">📈 Análise Deep Learning</a>
 
-A partir da Entidade Supply-Chain podemos começar a construir novos relacionamentos para especilizar ainda mais nossa companhia, representando as associações entre as entidades.
+Classificador de imagens binária - Pinguins VS Tartarugas.
 
-O mapeamento de um esquema conceitual, definido pelo MER, em um esquema lógico do modelo relacional envolve transformar cada elemento de um esquema de entidades e relacionamentos (entidades, relacionamentos e atributos) em elementos equivalentes da modelagem relacional (tabelas, atributos e restrições estruturais).
+Sobre o conjunto de dados 572 imagens únicas, divididas em uma pasta de treinamento de 500 imagens e uma pasta de validação de 72 imagens. O conjunto de dados é dividido 50:50 entre imagens de tartarugas e pinguins. Cada imagem contém exatamente uma instância de um objeto. 
 
-Com a criação de uma chave estrangeira em uma das tabelas representam as entidades envolvidas no relacionamento. No caso apresentado abaixo, podemos especializar ainda mais nosso SKU e Fornecedores, criando a entidade produto e a entidade fornecedor, por exemplo.
+Avaliação do modelo de deep learning: a acurácia do modelo nos dados de teste 82%.
+
+Nosso modelo de treino e validação não apresentaram precisão e perdas fidedignas. Modelo deveria melhorar seus hiperparâmetros para melhor performance.
 
  ## <a name="contributors"> 💬 Contribuições</a>
 
