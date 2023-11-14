@@ -33,6 +33,28 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 2. Deep Learning: criar um modelo de visão computacional que consiga classificar as imagens em alguma das categorias de animais:pinguins e tartarugas.
 
 
+## <a name="versions">🔨 Ferramentas Utilizadas </a>
+
+- [Kaggle](https://azure.microsoft.com/pt-br/get-started/azure-portal)
+    * Coleta de Dados
+    
+  
+- [Google Colab:](https://colab.research.google.com/?utm_source=scs-index)
+     ```bash
+    # Importação das Bibliotecas:
+    import numpy as np # Importação do Numpy
+    import pandas as pd # Importação do Pandas
+    import matplotlib.pyplot as plt # Importação do Matplotlib
+    import seaborn as sns # importando a biblioteca Seaborn
+    import tensorflow as tf # importando keras no Tensorflow
+    from sklearn.model_selection import train_test_split # para particionar em bases de treino e teste (holdout)
+    from sklearn.pipeline import Pipeline # para preparar os pipelines # para preparar os pipelines
+    from sklearn.model_selection import KFold # para preparar os folds da validação cruzada
+    from sklearn.model_selection import StratifiedKFold # para preparar os folds da validação estratificada
+    from sklearn.model_selection import cross_val_score # para executar a validação cruzada
+    from sklearn.metrics import accuracy_score # para a exibição da acurácia do modelo
+    from sklearn.metrics import confusion_matrix # para a exibição da matriz de confusão
+    ```
 
 ## <a name="percurso">🚀 1. Percurso Machine Learning </a>
 
@@ -61,29 +83,6 @@ Nestes dois notebooks, os objetivos foram, repectivamente, trabalharmos com mode
 |  7  | Simulação em dados não vistos |
 
 
-## <a name="versions">🔨 Ferramentas Utilizadas </a>
-
-- [Kaggle](https://azure.microsoft.com/pt-br/get-started/azure-portal)
-    * Coleta de Dados
-    
-  
-- [Google Colab:](https://colab.research.google.com/?utm_source=scs-index)
-     ```bash
-    # Importação das Bibliotecas:
-    import numpy as np # Importação do Numpy
-    import pandas as pd # Importação do Pandas
-    import matplotlib.pyplot as plt # Importação do Matplotlib
-    import seaborn as sns # importando a biblioteca Seaborn
-    import tensorflow as tf # importando keras no Tensorflow
-    from sklearn.model_selection import train_test_split # para particionar em bases de treino e teste (holdout)
-    from sklearn.pipeline import Pipeline # para preparar os pipelines # para preparar os pipelines
-    from sklearn.model_selection import KFold # para preparar os folds da validação cruzada
-    from sklearn.model_selection import StratifiedKFold # para preparar os folds da validação estratificada
-    from sklearn.model_selection import cross_val_score # para executar a validação cruzada
-    from sklearn.metrics import accuracy_score # para a exibição da acurácia do modelo
-    from sklearn.metrics import confusion_matrix # para a exibição da matriz de confusão
-    ```
-
 ## <a name="analysis">☑️ Análise Machine Learning</a>
 
 O dataset utilizado neste notebook possibilitará trabalharmos com modelos de machine learning (aprendizado de máquina), para escolher o melhor modelo para prever o grau de obesidade. Nossos dados são estruturados, onde foram extraídos de um banco de dados da plataforma Kaggle. Trataremos um modelo em aprendizado supervisionado, já que este modelo é construído a partir de um dataset, que são apresentados para um algoritmo na forma de entrada e saída desejada.
@@ -111,7 +110,6 @@ Nosso modelo de treino e validação não apresentaram precisão e perdas fidedi
 ⚠️ Ajudando, respondendo ou compartilhando o seu trabalho comigo! 
 
 ⭐ Adicionando aos favoritos! 
-
 
 
 
